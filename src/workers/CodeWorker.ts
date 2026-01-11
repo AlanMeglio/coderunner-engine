@@ -1,7 +1,6 @@
 import { Worker, Job } from 'bullmq';
 import { Executor } from '../lib/Executor';
 
-// Definimos la estructura de datos que esperamos recibir en la cola
 export interface CodeJobData {
     code: string;
     language: 'python'; // Por ahora restringido a lo que soporta Executor
@@ -32,8 +31,6 @@ export const codeWorker = new Worker<CodeJobData>(
             throw new Error("El payload del trabajo no contiene la propiedad 'code'.");
         }
 
-        // Ejecutamos el código usando la lógica encapsulada en la librería
-        // Nota: Executor maneja internamente sus errores de runtime y devuelve un objeto seguro
         const result = await engine.runPython(code);
 
         console.log(`✅ [Worker ${job.id}] Terminado. Tiempo: ${result.executionTimeMs}ms`);

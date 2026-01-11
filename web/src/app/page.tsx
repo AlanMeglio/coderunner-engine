@@ -8,7 +8,7 @@ export default function Home() {
   const [output, setOutput] = useState("// El resultado aparecerá aquí...");
   const [status, setStatus] = useState("IDLE"); // IDLE, RUNNING, COMPLETED, ERROR
 
-  // Función para preguntar al servidor si ya terminó
+  // Status polling
   const pollStatus = async (id: string) => {
     const interval = setInterval(async () => {
       try {
@@ -68,7 +68,6 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col bg-[#0d1117] text-white">
-      {/* HEADER */}
       <header className="flex items-center justify-between px-6 py-4 border-b border-gray-800 bg-[#161b22]">
         <h1 className="font-mono font-bold text-xl text-blue-400">
           CODERUNNER<span className="text-white">_ENGINE</span>
@@ -86,7 +85,6 @@ export default function Home() {
         </button>
       </header>
 
-      {/* WORKSPACE */}
       <div className="flex flex-1 h-[calc(100vh-64px)]">
         <div className="w-1/2 border-r border-gray-800">
           <Editor

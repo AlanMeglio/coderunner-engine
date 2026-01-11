@@ -11,7 +11,6 @@ export class Executor {
     private docker: Docker;
 
     constructor() {
-        // Inicializamos docker una sola vez
         this.docker = new Docker();
     }
 
