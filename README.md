@@ -259,7 +259,7 @@ Este proyecto está bajo la Licencia MIT. Consulta el archivo [LICENSE](LICENSE)
 **Alan Meglio**
 
 - 🌐 LinkedIn: [linkedin.com/in/meglioalan](https://www.linkedin.com/in/meglioalan/)
-- 📧 Email: tu.email@ejemplo.com
+- 📧 Email: meglioalan@gmail.com
 - 🐙 GitHub: [@AlanMeglio](https://github.com/AlanMeglio)
 
 ---
